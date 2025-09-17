@@ -9,7 +9,7 @@ const app=express();
 app.use(express.urlencoded({ extended: true })); 
 var cors = require('cors'); 
 app.use(cors({
-    origin:'http://localhost:5173',
+    origin:'https://study-nestle.vercel.app',
     credentials:true
 }));
 
