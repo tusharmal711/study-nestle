@@ -60,7 +60,7 @@ const logoutUser=async(req,res)=>{
 //get profile
 const userProfile= async(req,res)=>{
     try {
-   const userId = req.user.id || req.user._id;
+   const userId = req.user._id || req.user._id;
     
     const person = await User.findById(userId).select("-password"); 
     // .select("-password") excludes sensitive field like password

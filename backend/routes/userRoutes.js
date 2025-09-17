@@ -12,7 +12,7 @@ router.post("/login",loginUser);
 //logout
 router.post("/logout",logoutUser);
 
-router.get("/getProfile",userProfile);
+router.get("/getProfile",authMiddleware,userProfile);
 
 router.patch("/updateProfile",authMiddleware,upload.single("photo"),updateProfile);
 
