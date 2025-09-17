@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
-
 export default function GetProfile() {
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(false);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 function SearchStudyMaterial() {
   const [materials, setMaterials] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
