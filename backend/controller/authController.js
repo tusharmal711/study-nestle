@@ -60,8 +60,14 @@ const logoutUser=async(req,res)=>{
 //get profile
 const userProfile= async(req,res)=>{
     try {
-   const userId = req.user.id || req.user._id;
-    
+      if (!req.user) {
+      return res.status(401).json({
+        success: false,
+        message: "Unauthorized: no user found"
+      });
+    }
+   const userId = req.user._id;
+    console.log(userId);
     const person = await User.findById(userId).select("-password"); 
     // .select("-password") excludes sensitive field like password
 
